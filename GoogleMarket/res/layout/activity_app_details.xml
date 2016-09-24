@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_bg" >
+    
+    <!-- 可滚动的界面 -->
+    <ScrollView 
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:orientation="vertical" >
+            
+            <!-- 第一块：应用信息：图标、名称、评分、下载量等等 -->
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+	            android:paddingLeft="6dp"
+	            android:paddingRight="6dp"
+	            android:paddingBottom="6dp"
+	            android:background="@drawable/list_item_bg_normal"
+	            android:orientation="vertical">
+	            
+                <!-- 第一行：图标、名称、评分 -->
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    
+                    <!-- 第1列：应用图标 -->
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_default" />
+                    
+                    <!-- 第2列：应用名称、评分 -->
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="6dp">
+                        
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="酷狗音乐"
+                            android:textColor="@color/gray" />
+                        
+                         <!-- android:isIndicator="true" 把RatingBar仅仅做为指示器，只能用于显示 -->
+		                <RatingBar
+		                    android:id="@+id/rating_bar"
+		                    style="@android:style/Widget.RatingBar"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="14dp"
+		                    android:isIndicator="true"
+		                    android:progressDrawable="@drawable/ratingbar_full" />
+                        
+                    </LinearLayout>
+                    
+                </LinearLayout>
+                
+                <!-- 第二行：下载量、版本号 -->
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    
+                    <TextView
+                        android:id="@+id/tv_download_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="6000万+"
+                        android:textColor="@color/gray" />
+                    
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="6.3.2"
+                        android:textColor="@color/gray" />
+                    
+                </LinearLayout>
+                
+                <!-- 第三行：发布日期、大小 -->
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+                    
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2014-05-28"
+                        android:textColor="@color/gray" />
+                    
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="8.38MB"
+                        android:textColor="@color/gray" />
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+        	<!-- 第二块：官方、安全、无广告 -->
+
+        	<LinearLayout
+        	    android:id="@+id/ll_safe_root"
+        	    android:layout_width="match_parent"
+        	    android:layout_height="wrap_content"
+        	    android:background="@drawable/list_item_bg_normal"
+        	    android:orientation="vertical"
+        	    android:paddingBottom="6dp"
+        	    android:paddingLeft="6dp"
+        	    android:paddingRight="6dp"
+        	    android:paddingTop="10dp" >
+        	    
+        	    <!-- 第一个内容：图标 -->
+
+        	    <LinearLayout
+        	        android:id="@+id/ll_safe_icon"
+        	        android:layout_width="match_parent"
+        	        android:layout_height="wrap_content"
+        	        android:gravity="center_vertical"
+        	        android:orientation="horizontal" >
+        	        
+        	        <ImageView 
+        	            android:layout_width="68dp"
+        	            android:layout_height="30dp"
+        	            android:src="@drawable/safe_icon0"/>
+        	        
+        	        <ImageView 
+        	            android:layout_width="68dp"
+        	            android:layout_height="30dp"
+        	            android:layout_marginLeft="6dp"
+        	            android:src="@drawable/safe_icon0"/>
+        	        
+        	        <ImageView 
+        	            android:layout_width="68dp"
+        	            android:layout_height="30dp"
+        	            android:layout_marginLeft="6dp"
+        	            android:src="@drawable/safe_icon0"/>
+        	        
+        	        <View 
+        	            android:layout_width="0dp"
+        	            android:layout_height="2dp"
+        	            android:layout_weight="1" />
+        	        
+        	        <ImageView 
+        	            android:id="@+id/iv_safe_arrow"
+        	            android:layout_width="wrap_content"
+        	            android:layout_height="wrap_content"
+        	            android:src="@drawable/arrow_down"/>
+        	        
+        	    </LinearLayout>
+        	    
+        	    <!-- 第二个内容：图标对应的描述 -->
+
+        	    <LinearLayout
+        	        android:id="@+id/ll_safe_desc"
+        	        android:layout_width="match_parent"
+        	        android:layout_height="wrap_content"
+        	        android:orientation="vertical" >
+        	        
+        	        <TextView
+        	            android:layout_width="wrap_content"
+        	            android:layout_height="wrap_content"
+        	            android:text="中华人民共和国保人加价加价加价中华人民共和国"
+        	            android:singleLine="true"
+        	            android:textColor="@color/gray"
+        	            android:drawableLeft="@drawable/safe_des_icon"
+        	            android:layout_marginTop="6dp" />
+        	        
+        	        <TextView
+        	            android:layout_width="wrap_content"
+        	            android:layout_height="wrap_content"
+        	            android:text="中华人民共和国保人加价加价加价中华人民共和国"
+        	            android:singleLine="true"
+        	            android:textColor="@color/gray"
+        	            android:drawableLeft="@drawable/safe_des_icon"
+        	            android:layout_marginTop="6dp" />
+        	        
+        	        <TextView
+        	            android:layout_width="wrap_content"
+        	            android:layout_height="wrap_content"
+        	            android:text="中华人民共和国保人加价加价加价中华人民共和国"
+        	            android:singleLine="true"
+        	            android:textColor="@color/gray"
+        	            android:drawableLeft="@drawable/safe_des_icon"
+        	            android:layout_marginTop="6dp" />
+        	        
+        	    </LinearLayout>
+        	    
+        	</LinearLayout>
+        	
+        	<!-- 第三块：应用截图 -->
+        	<HorizontalScrollView 
+        	    android:layout_width="match_parent"
+        	    android:layout_height="wrap_content"
+        	    android:background="#CCCCCC">
+        	    
+        	    <LinearLayout 
+        	        android:id="@+id/ll_screen"
+        	        android:layout_width="wrap_content"
+        	        android:layout_height="wrap_content"
+        	        android:padding="6dp"
+        	        android:orientation="horizontal" />
+        	    
+        	</HorizontalScrollView>
+        	
+        	
+        	<!-- 第四块：应用的简介 -->
+            <LinearLayout
+                android:id="@+id/ll_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_bg_normal"
+                android:orientation="vertical"
+                android:padding="8dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="3dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="简介"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_desc_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/arrow_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="7"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+</LinearLayout>
+        
+        
+    </ScrollView>
+    
+    <!-- 底部的下载按钮 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#666666"
+       android:padding="6dp"
+        android:orientation="horizontal">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="收藏"
+            android:padding="6dp"
+             android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:background="@drawable/detail_btn_pressed"
+            />
+        
+        <FrameLayout 
+            android:layout_marginLeft="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:background="@drawable/detail_btn_pressed"
+            >
+            
+            <ProgressBar 
+                android:id="@+id/pb_download"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                
+                style="@android:style/Widget.ProgressBar.Horizontal"
+               android:progressDrawable="@drawable/progress_horizontal"
+                />
+            <TextView 
+                android:id="@+id/tv_downLoad"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="下载"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+            
+        </FrameLayout>
+         <TextView 
+             
+              android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="分享"
+            android:padding="6dp"
+             android:textColor="@android:color/white"
+             android:gravity="center_vertical"
+             android:background="@drawable/detail_btn_pressed"
+            />
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

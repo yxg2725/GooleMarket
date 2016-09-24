@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.itheima.googlemarket.view.StateFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+   >
+    
+<!--     正在加载 -->
+<ProgressBar 
+    android:id="@+id/state_pbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"/>
+<!-- 加载失败 -->
+
+<LinearLayout
+    android:id="@+id/state_fail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_error_page"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载失败，点击重试"
+         android:textSize="16sp"
+            android:layout_margin="6dp"
+            android:textColor="#666666"
+            android:background="@drawable/btn_normal"
+            android:padding="6dp"/>
+
+</LinearLayout>
+
+<!--     加载为空 -->
+
+<ImageView 
+    android:id="@+id/state_empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_empty_page"
+    android:layout_gravity="center"
+    />
+
+</com.itheima.googlemarket.view.StateFrameLayout>

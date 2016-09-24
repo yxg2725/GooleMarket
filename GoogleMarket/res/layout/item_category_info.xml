@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+<!--     行中的第一个分类 -->
+    <LinearLayout 
+        android:id="@+id/ll_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@drawable/selector_category_item"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:id="@+id/iv_icon1"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            
+            android:src="@drawable/category_app_1"/>
+        
+        <TextView 
+            android:id="@+id/tv_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_marginTop="6dp"
+            android:text="休闲"/>
+        
+    </LinearLayout>
+    
+    <!--     行中的第二个分类 -->
+    <LinearLayout 
+        android:id="@+id/ll_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@drawable/selector_category_item"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:id="@+id/iv_icon_2"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:src="@drawable/category_app_1"/>
+        
+        <TextView 
+            android:id="@+id/tv_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_marginTop="6dp"
+            android:text="休闲"/>
+        
+    </LinearLayout>
+    
+    <!--     行中的第三个分类 -->
+    <LinearLayout 
+        android:id="@+id/ll_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:background="@drawable/selector_category_item"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:id="@+id/iv_icon_3"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:src="@drawable/category_app_1"/>
+        
+        <TextView 
+            android:id="@+id/tv_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_marginTop="6dp"
+            android:text="休闲"/>
+        
+    </LinearLayout>
+       </LinearLayout>
